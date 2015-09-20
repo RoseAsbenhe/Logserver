@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
-            res.send("There was a problem adding the information to the database.");
+            res.send("There was a problem adding the information to the database. "+err+" doc: "+doc);
         }
         else {
             // And forward to success page

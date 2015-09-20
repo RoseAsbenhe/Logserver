@@ -13,6 +13,12 @@ var app = express();
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/logserver');
+/*
+var db = monk('localhost:20892/db?authSource=logserver', {
+    username : '',
+    password : ''
+});
+*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
